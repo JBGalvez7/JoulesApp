@@ -14,14 +14,15 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/main.fxml")));
-        primaryStage.setTitle("Student Details:");
+        primaryStage.setTitle("New Student:");
 
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
+    DatabaseConnection db = new DatabaseConnection();
 
     public static void main(String[] args) {
-        DatabaseConnection db = new DatabaseConnection();
+
         launch(args);
     }
 }

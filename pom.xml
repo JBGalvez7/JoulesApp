@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.joules</groupId>
-    <artifactId>JOULESAPP</artifactId>
+    <groupId>com.joules</groupId>
+    <artifactId>IDEAPROJECTS</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17.0.12</maven.compiler.source>
-        <maven.compiler.target>17.0.12</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -25,13 +25,13 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17.0.12</version>
+            <version>17</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17.0.12</version>
+            <version>17</version>
         </dependency>
 
     </dependencies>
@@ -43,7 +43,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>org.joules.Main</mainClass>
+                    <mainClass>com.joules.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
