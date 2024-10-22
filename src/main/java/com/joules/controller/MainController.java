@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 
 public class MainController {
     @FXML
@@ -24,13 +25,17 @@ public class MainController {
     private RadioButton genderMale;
     @FXML
     private RadioButton genderFemale;
+
+    public ToggleGroup gender;
+
+    @FXML
     private DatabaseConnection connection;
 
     public MainController() {
     }
 
-    private void initialize() {
-        this.connection = new DatabaseConnection();
+    public void initialize(){
+        connection = new DatabaseConnection();
     }
 
     @FXML
@@ -43,8 +48,12 @@ public class MainController {
         stmt.setString(4, this.address.getText());
         stmt.setString(5, this.email.getText());
         stmt.setString(6, this.number.getText());
-        stmt.setString(7, this.genderMale.getText());
-        stmt.setString(7, this.genderFemale.getText());
+        if(genderMale.isSelected()){
+            stmt.setString(7,"Male");
+        }
+        else if (genderFemale.isSelected()){
+            stmt.setString(7, "Female");
+        }
         stmt.execute();
     }
 }
